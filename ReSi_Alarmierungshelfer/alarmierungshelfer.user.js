@@ -16,7 +16,7 @@
     let requirements, missionId;
     async function getRequirements()
     {
-        await $.ajax({url:"https://rettungssimulator.online/json/missions.json", success: (result) => {requirements = result; localStorage.setItem("alarmHelperCache", JSON.stringify(requirements))}});
+        await $.ajax({url:"/json/missions.json", success: (result) => {requirements = result; localStorage.setItem("alarmHelperCache", JSON.stringify(requirements))}});
     }
 
     function buildRequirementsString()
